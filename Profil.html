@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hiba Niri | Développeuse Full Stack Junior</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de Hiba Niri, Développeuse Full Stack Junior. Découvrez mes projets, compétences et expériences.">
+    <meta property="og:title" content="Hiba Niri | Développeuse Full Stack Junior">
+    <meta property="og:description"
+        content="Portfolio de Hiba Niri, Développeuse Full Stack Junior, passionnée par les applications web.">
+    <meta property="og:image" content="img/hero.svg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { primary: '#4f46e5' } } }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- AOS animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .scroll-to-top {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .scroll-to-top:hover {
+            background: #3730a3;
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
+
+    <!-- NAVBAR -->
+    <header class="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center bg-white dark:bg-gray-800 shadow-sm">
+        <h1 class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">Hiba Niri</h1>
+        <nav class="hidden md:flex gap-10 text-sm font-medium">
+            <a href="#about" class="hover:text-indigo-600 dark:hover:text-indigo-400">À propos</a>
+            <a href="#experience" class="hover:text-indigo-600 dark:hover:text-indigo-400">Expérience</a>
+            <a href="#skills" class="hover:text-indigo-600 dark:hover:text-indigo-400">Compétences</a>
+            <a href="#projects" class="hover:text-indigo-600 dark:hover:text-indigo-400">Projets</a>
+            <a href="#contact" class="hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a>
+        </nav>
+        <div class="md:hidden flex items-center">
+            <button id="menu-btn" class="text-gray-800 dark:text-gray-200 text-3xl">☰</button>
+            <button id="theme-toggle" class="ml-4 text-gray-800 dark:text-gray-200 text-xl"><i
+                    class="fas fa-moon"></i></button>
+        </div>
+    </header>
+
+    <!-- Mobile menu -->
+    <nav id="mobile-menu"
+        class="hidden flex-col gap-4 px-8 md:hidden bg-white dark:bg-gray-800 shadow-md rounded-b-3xl py-4 max-w-7xl mx-auto">
+        <a href="#about" class="block py-2 hover:text-indigo-600 dark:hover:text-indigo-400">À propos</a>
+        <a href="#experience" class="block py-2 hover:text-indigo-600 dark:hover:text-indigo-400">Expérience</a>
+        <a href="#skills" class="block py-2 hover:text-indigo-600 dark:hover:text-indigo-400">Compétences</a>
+        <a href="#projects" class="block py-2 hover:text-indigo-600 dark:hover:text-indigo-400">Projets</a>
+        <a href="#contact" class="block py-2 hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a>
+    </nav>
+
+    <!-- HERO -->
+    <section
+        class="max-w-7xl mx-auto px-8 py-28 grid md:grid-cols-2 gap-20 items-center bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-[3rem]">
+        <div>
+            <span
+                class="inline-block bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 text-xs px-4 py-1 rounded-full">Développeuse
+                Full Stack Junior</span>
+            <h2 class="text-5xl font-extrabold mt-6 leading-tight">
+                Bonjour, je suis Hiba Niri <br>
+                <span class="text-indigo-600 dark:text-indigo-400"><span id="animated-text"></span></span>
+            </h2>
+            <p class="text-gray-600 dark:text-gray-400 mt-6 max-w-md">
+                Étudiante en 2ᵉ année Développement Full Stack, motivée et curieuse, je souhaite mettre mes compétences
+                en pratique dans un environnement professionnel.
+            </p>
+            <div class="flex gap-4 mt-8">
+                <a href="#projects"
+                    class="bg-indigo-600 text-white px-7 py-3 rounded-xl shadow hover:bg-indigo-700 transition">Voir mes
+                    projets</a>
+                <a href="#contact"
+                    class="bg-white dark:bg-gray-700 px-7 py-3 rounded-xl shadow hover:shadow-xl transition">Contactez-moi</a>
+                <a href="cv.pdf" download
+                    class="bg-gray-200 dark:bg-gray-600 px-7 py-3 rounded-xl shadow hover:shadow-xl transition">Télécharger
+                    CV</a>
+            </div>
+        </div>
+        <div class="bg-white dark:bg-gray-700 rounded-3xl p-10 shadow-2xl">
+            <img src="img/hero.svg" alt="Illustration développeuse web" class="w-full h-auto">
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto px-8 py-24">
+        <h3 class="text-3xl font-bold mb-6">À propos de moi</h3>
+        <p class="text-gray-600 dark:text-gray-400 max-w-3xl leading-relaxed">
+            Je suis Hiba Niri, Développeuse Full Stack Junior passionnée par la création d'applications web performantes
+            et intuitives. Depuis le début de mon parcours en programmation, j'aime transformer des idées en expériences
+            numériques concrètes.
+        </p>
+        <p class="text-gray-600 dark:text-gray-400 mt-4 max-w-3xl leading-relaxed">
+            Mon expertise couvre HTML, CSS, JavaScript, React, PHP et MySQL. Chaque projet est une opportunité
+            d'apprendre et de relever un défi technique.
+        </p>
+        <p class="text-gray-600 dark:text-gray-400 mt-4 max-w-3xl leading-relaxed">
+            Curieuse, organisée et créative, j'apprécie le travail en équipe et la collaboration pour développer des
+            solutions impactantes.
+        </p>
+    </section>
+
+    <!-- EXPERIENCE & EDUCATION -->
+    <section id="experience" class="max-w-6xl mx-auto px-8 py-24">
+        <h3 class="text-3xl font-bold mb-12">Expérience & Éducation</h3>
+        <div class="relative border-l-2 border-indigo-200 dark:border-indigo-600 pl-8 space-y-12">
+            <div class="relative" data-aos="fade-right">
+                <span
+                    class="absolute -left-5 top-0 bg-indigo-600 dark:bg-indigo-400 w-10 h-10 rounded-full flex items-center justify-center text-white"><i
+                        class="fas fa-graduation-cap"></i></span>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow hover:shadow-xl transition">
+                    <h4 class="font-bold text-indigo-600 dark:text-indigo-400">Étudiante en Développement Full Stack
+                    </h4>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">2024 – 2026 | École de Développement
+                        Web</span>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">Acquisition de compétences en HTML, CSS, JS, React,
+                        PHP et MySQL. Réalisation de projets académiques.</p>
+                </div>
+            </div>
+            <div class="relative" data-aos="fade-left">
+                <span
+                    class="absolute -left-5 top-0 bg-indigo-600 dark:bg-indigo-400 w-10 h-10 rounded-full flex items-center justify-center text-white"><i
+                        class="fas fa-code"></i></span>
+                <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow hover:shadow-xl transition">
+                    <h4 class="font-bold text-indigo-600 dark:text-indigo-400">Projets Personnels</h4>
+                    <span class="text-sm text-gray-500 dark:text-gray-400">2025 – 2026</span>
+                    <p class="mt-2 text-gray-600 dark:text-gray-300">Développement d'applications web pour renforcer mes
+                        compétences et expérimenter de nouvelles technologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="max-w-6xl mx-auto px-8 py-24">
+        <h3 class="text-3xl font-bold mb-12">Compétences</h3>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div>
+                <h4 class="text-indigo-600 dark:text-indigo-400 font-bold mb-4"><i
+                        class="fas fa-tools mr-2"></i>Compétences Techniques</h4>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 px-4 py-1 rounded-full">HTML</span>
+                    <span
+                        class="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 px-4 py-1 rounded-full">CSS</span>
+                    <span
+                        class="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 px-4 py-1 rounded-full">JavaScript</span>
+                    <span
+                        class="bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 px-4 py-1 rounded-full">React</span>
+                    <span
+                        class="bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 px-4 py-1 rounded-full">PHP</span>
+                    <span
+                        class="bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 px-4 py-1 rounded-full">SQL
+                        / MySQL</span>
+                    <span
+                        class="bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-400 px-4 py-1 rounded-full">CRUD</span>
+                    <span
+                        class="bg-pink-100 dark:bg-pink-900 text-pink-600 dark:text-pink-400 px-4 py-1 rounded-full">Git
+                        / GitHub</span>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-indigo-600 dark:text-indigo-400 font-bold mb-4"><i class="fas fa-users mr-2"></i>Soft
+                    Skills</h4>
+                <div class="flex flex-wrap gap-3">
+                    <span
+                        class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-1 rounded-full">Résolution
+                        de problèmes</span>
+                    <span
+                        class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-1 rounded-full">Travail
+                        d'équipe</span>
+                    <span
+                        class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-1 rounded-full">Leadership</span>
+                    <span
+                        class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-1 rounded-full">Adaptabilité</span>
+                    <span
+                        class="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-1 rounded-full">Créativité</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-7xl mx-auto px-8 py-24">
+        <h3 class="text-3xl font-bold mb-12">Projets Académiques</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white dark:bg-gray-800 rounded-3xl shadow hover:shadow-2xl transition p-6">
+                <h4 class="font-bold text-indigo-600 dark:text-indigo-400">Interface Instagram</h4>
+                <em>Full Stack | 2024 – 2025</em>
+                <ul class="list-disc ml-5 mt-2 text-gray-600 dark:text-gray-400">
+                    <li>Interface responsive HTML/CSS</li>
+                    <li>Authentification PHP & SQL</li>
+                    <li>Base de données MySQL</li>
+                    <li>Sécurisation des formulaires</li>
+                </ul>
+                <a href="https://github.com/extrh1/instagram-interface"
+                    class="text-indigo-600 dark:text-indigo-400 mt-4 inline-block">Voir sur GitHub</a>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-3xl shadow hover:shadow-2xl transition p-6">
+                <h4 class="font-bold text-indigo-600 dark:text-indigo-400">Gestion de Stock</h4>
+                <em>React | 2025 – 2026</em>
+                <ul class="list-disc ml-5 mt-2 text-gray-600 dark:text-gray-400">
+                    <li>Composants React</li>
+                    <li>State & Props</li>
+                    <li>Stockage local (localStorage)</li>
+                </ul>
+                <a href="https://github.com/extrh1/project-gestion-stock"
+                    class="text-indigo-600 dark:text-indigo-400 mt-4 inline-block">Voir sur GitHub</a>
+            </div>
+            <div class="bg-white dark:bg-gray-800 rounded-3xl shadow hover:shadow-2xl transition p-6">
+                <h4 class="font-bold text-indigo-600 dark:text-indigo-400">Portfolio Personnel</h4>
+                <em>HTML/CSS + JS | 2026</em>
+                <ul class="list-disc ml-5 mt-2 text-gray-600 dark:text-gray-400">
+                    <li>Responsive & animations</li>
+                    <li>Navigation smooth scroll</li>
+                    <li>Design moderne et épuré</li>
+                </ul>
+                <a href="https://github.com/extrh1/portfolio"
+                    class="text-indigo-600 dark:text-indigo-400 mt-4 inline-block">Voir sur GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-6xl mx-auto px-8 py-24">
+        <div
+            class="bg-white/80 dark:bg-gray-800/80 backdrop-blur border border-indigo-100 dark:border-gray-700 rounded-3xl p-12 shadow-2xl">
+            <h3 class="text-3xl font-bold mb-6">Contactez-moi</h3>
+            <form id="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST" class="grid gap-6">
+                <input type="text" name="name" placeholder="Votre nom"
+                    class="border dark:border-gray-600 dark:bg-gray-700 p-4 rounded-xl" required>
+                <input type="email" name="email" placeholder="Votre email"
+                    class="border dark:border-gray-600 dark:bg-gray-700 p-4 rounded-xl" required>
+                <textarea name="message" placeholder="Message"
+                    class="border dark:border-gray-600 dark:bg-gray-700 p-4 rounded-xl h-32" required></textarea>
+                <button type="submit"
+                    class="bg-indigo-600 text-white py-4 rounded-xl hover:bg-indigo-700 transition">Envoyer</button>
+            </form>
+            <div id="form-message" class="mt-4 text-center hidden"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-10 text-gray-500 dark:text-gray-400 text-sm bg-gray-50 dark:bg-gray-800">
+        <div class="flex justify-center gap-6 mb-4">
+            <a href="https://github.com/extrh1" class="hover:text-indigo-600 dark:hover:text-indigo-400"><i
+                    class="fab fa-github mr-1"></i>GitHub</a>
+            <a href="https://www.linkedin.com/in/hiba-niri-02b3803a7/"
+                class="hover:text-indigo-600 dark:hover:text-indigo-400"><i
+                    class="fab fa-linkedin mr-1"></i>LinkedIn</a>
+        </div>
+        © 2026 Hiba Niri - Tous droits réservés
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scroll-to-top" class="scroll-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- SCRIPTS -->
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Mobile menu
+        const btn = document.getElementById('menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+        // Scroll to top
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        // Animated text
+        const animatedText = document.getElementById('animated-text');
+        const phrases = ['Développeuse Full Stack', 'Passionnée par le Web', 'Créatrice d\'Expériences'];
+
+        let currentPhrase = 0;
+        let currentLetter = 0;
+        let isDeleting = false;
+        let typingSpeed = 100; // vitesse d'affichage d'une lettre en ms
+        let pauseBetweenPhrases = 1500; // pause avant de passer à la phrase suivante
+
+        function typeWriter() {
+            const phrase = phrases[currentPhrase];
+
+            if (!isDeleting) {
+                // Ajouter lettre par lettre
+                animatedText.textContent = phrase.substring(0, currentLetter + 1);
+                currentLetter++;
+
+                if (currentLetter === phrase.length) {
+                    // Phrase complète affichée, pause avant suppression
+                    isDeleting = true;
+                    setTimeout(typeWriter, pauseBetweenPhrases);
+                    return;
+                }
+            } else {
+                // Supprimer lettre par lettre
+                animatedText.textContent = phrase.substring(0, currentLetter - 1);
+                currentLetter--;
+
+                if (currentLetter === 0) {
+                    // Phrase supprimée, passer à la suivante
+                    isDeleting = false;
+                    currentPhrase = (currentPhrase + 1) % phrases.length;
+                }
+            }
+
+            setTimeout(typeWriter, isDeleting ? typingSpeed / 2 : typingSpeed);
+        }
+
+        // Lancer l'animation
+        typeWriter();
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        const formMessage = document.getElementById('form-message');
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(contactForm);
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (response.ok) {
+                    formMessage.textContent = 'Merci pour votre message ! Je vous répondrai bientôt.';
+                    formMessage.classList.remove('hidden', 'text-red-500');
+                    formMessage.classList.add('text-green-500');
+                    contactForm.reset();
+                } else {
+                    throw new Error('Erreur lors de l\'envoi du message.');
+                }
+            } catch (error) {
+                formMessage.textContent = 'Une erreur est survenue. Veuillez réessayer plus tard.';
+                formMessage.classList.remove('hidden', 'text-green-500');
+                formMessage.classList.add('text-red-500');
+            }
+        });
+    </script>
+</body>
+
+</html>
